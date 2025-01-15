@@ -1,19 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1D1A25"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:text="Создайте аккаунт" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColorHint="#6a6a6a"
+        android:hint="Введите логин..." />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#6a6a6a"
+        android:hint="Введите пароль..." />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:textSize="14dp"
+        android:textColorHint="#6a6a6a"
+        android:layout_marginTop="20dp"
+        android:hint="Введите пароль повторно..." />
+
+    <Button
+        android:id="@+id/button_reg"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Зарегаться"
+        android:layout_gravity="center"
+        android:backgroundTint="#544679"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.489" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
