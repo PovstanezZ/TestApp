@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583212189527",
+    "project_id": "cardholder-c4249",
+    "storage_bucket": "cardholder-c4249.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583212189527:android:76d48abbdd87c57c232012",
+        "android_client_info": {
+          "package_name": "com.example.testapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRvI8kJhXu-Mp0L4LTY65g7XBdw0pmUqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

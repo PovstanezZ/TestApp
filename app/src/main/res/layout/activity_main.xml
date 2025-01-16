@@ -10,60 +10,61 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:text="Создайте аккаунт"
         android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:layout_marginTop="150dp"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:text="Создайте аккаунт" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/login_text"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:ems="10"
-        android:textSize="14dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Введите логин..."
         android:textColorHint="#6a6a6a"
-        android:hint="Введите логин..." />
+        android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/email_text"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:ems="10"
-        android:textSize="14dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Введите почту..."
         android:textColorHint="#6a6a6a"
-        android:hint="Введите пароль..." />
+        android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/pass_text"
         android:layout_width="250dp"
-        android:layout_gravity="center"
         android:layout_height="60dp"
-        android:ems="10"
-        android:textSize="14dp"
-        android:textColorHint="#6a6a6a"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:hint="Введите пароль повторно..." />
+        android:ems="10"
+        android:hint="Введите пароль..."
+        android:textColorHint="#6a6a6a"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/button_reg"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:text="Зарегаться"
         android:layout_gravity="center"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#544679"
+        android:text="Зарегестрироваться"
         android:textColor="#ffffff"
+        android:textSize="19sp"
         android:textStyle="bold"
-        android:textSize="17dp"
+        app:cornerRadius="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
