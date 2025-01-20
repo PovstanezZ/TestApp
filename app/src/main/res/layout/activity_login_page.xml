@@ -15,15 +15,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
-        android:text="Регистрация"
+        android:text="Авторизация"
         android:textColor="#ffffff"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-
-
     <EditText
-        android:id="@+id/email_text"
+        android:id="@+id/login_text_auth"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
@@ -33,25 +31,26 @@
         android:textColorHint="#6a6a6a"
         android:textSize="14sp" />
 
+
     <EditText
-        android:id="@+id/pass_text"
+        android:id="@+id/pass_text_auth"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Введите пароль..."
+        android:hint="Введите логин..."
         android:textColorHint="#6a6a6a"
         android:textSize="14sp" />
 
     <Button
-        android:id="@+id/button_reg"
+        android:id="@+id/button_auth"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:backgroundTint="#544679"
-        android:text="Зарегестрироваться"
+        android:text="Войти"
         android:textColor="#ffffff"
         android:textSize="19sp"
         android:textStyle="bold"
@@ -63,12 +62,12 @@
         app:layout_constraintVertical_bias="0.489" />
 
     <TextView
-        android:id="@+id/login_auth_text"
+        android:id="@+id/reg_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:text="Есть аккаунт? Авторизуйся"
+        android:text="Нет аккаунта? Зарегистрируйся"
         android:textColor="#a9a9a9"
         android:textSize="15sp"
         android:textStyle="italic" />
