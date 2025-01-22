@@ -15,6 +15,10 @@
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31">
         <activity
+            android:name=".AnyOrientationCaptureActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".MainPage"
             android:exported="false" />
         <activity

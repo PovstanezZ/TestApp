@@ -46,12 +46,10 @@ class login_page : AppCompatActivity() {
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_LONG).show()
             } else {
-                // Авторизация пользователя
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Авторизация успешна!", Toast.LENGTH_SHORT).show()
-                            // Переход на главный экран или другой экран после успешного входа
                             startActivity(Intent(this, MainPage::class.java))
                             finish()
                         } else {

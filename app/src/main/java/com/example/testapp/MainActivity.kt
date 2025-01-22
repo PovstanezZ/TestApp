@@ -30,11 +30,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Привязка UI-элементов
         val userEmail: EditText = findViewById(R.id.email_text)
         val userPass: EditText = findViewById(R.id.pass_text)
         val button: Button = findViewById(R.id.button_reg)
         val login_page_button: TextView = findViewById(R.id.login_auth_text)
+
+        if (auth.currentUser != null) {
+            startActivity(Intent(this, MainPage::class.java))
+            finish()
+            return
+        }
 
         login_page_button.setOnClickListener{
             val intent = Intent (this,login_page::class.java)
@@ -49,7 +54,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Не все поля заполнены, долбаёб >.<", Toast.LENGTH_LONG).show()
             }
             else {
-                // Регистрация пользователя через Firebase
                 auth.createUserWithEmailAndPassword(email, pass)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {

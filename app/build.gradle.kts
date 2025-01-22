@@ -46,6 +46,10 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.database)
+
+    // Добавлена зависимость для ZXing
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
