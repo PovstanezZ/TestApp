@@ -35,15 +35,15 @@
         android:id="@+id/add_new_card"
         android:layout_width="65sp"
         android:layout_height="65sp"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="15sp"
-        android:layout_marginRight="15sp"
         android:layout_marginBottom="15sp"
-        android:backgroundTint="#544679"
+        android:backgroundTint="#26544679"
         android:gravity="center"
         android:text="+"
-        android:textSize="20sp"
         android:textColor="#ffffff"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView

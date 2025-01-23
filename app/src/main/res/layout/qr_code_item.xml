@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/qrCodeImageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:contentDescription="QR Code" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="left">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="left"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/NameOfQR"
+                android:layout_width="220sp"
+                android:layout_height="25sp"
+                android:text="Name of"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/dataOfQR"
+                android:layout_width="220sp"
+                android:layout_height="20sp"
+                android:layout_marginTop="35dp"
+                android:textSize="15sp"
+                android:text="Id"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/qrCodeImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:contentDescription="QR Code" />
+    </LinearLayout>
 </LinearLayout>
