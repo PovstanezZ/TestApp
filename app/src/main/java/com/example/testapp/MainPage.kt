@@ -10,20 +10,27 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
 
 class MainPage : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+    private lateinit var recyclerView: RecyclerView
+    private val qrCodeList = mutableListOf<String>() // Динамический список для QR-кодов
 
     // Инициализация сканера
     private val barcodeLauncher = registerForActivityResult(ScanContract()) { result ->
         if (result.contents != null) {
-            // Результат сканирования (штрих-код или QR-код)
+            // Результат сканирования
             val scannedCode = result.contents
             Toast.makeText(this, "Сканировано: $scannedCode", Toast.LENGTH_SHORT).show()
-            // Здесь можно сохранить карту в базу данных
+
+            // Добавить данные в список и обновить RecyclerView
+            qrCodeList.add(scannedCode)
+            recyclerView.adapter?.notifyDataSetChanged()
         } else {
             Toast.makeText(this, "Сканирование отменено", Toast.LENGTH_SHORT).show()
         }
@@ -34,6 +41,11 @@ class MainPage : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_page)
         auth = FirebaseAuth.getInstance()
+
+        // Инициализация RecyclerView
+        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = QRCodeAdapter(qrCodeList)
 
         // Обработка системных отступов
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -62,11 +74,9 @@ class MainPage : AppCompatActivity() {
     private fun startBarcodeScanner() {
         val options = ScanOptions()
         options.setPrompt("Сканируйте штрих-код или QR-код")
-        options.setBeepEnabled(true)            // Включить звуковой сигнал
-        options.setOrientationLocked(true)      // Заблокировать вертикальную ориентацию
+        options.setBeepEnabled(true)
+        options.setOrientationLocked(true)
         options.setCaptureActivity(AnyOrientationCaptureActivity::class.java)
-        barcodeLauncher.launch(options)         // Запустить сканер
+        barcodeLauncher.launch(options)
     }
-
 }
-

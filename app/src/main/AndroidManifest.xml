@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31">
         <activity
+            android:name=".QRCodeAdapter"
+            android:exported="false" />
+        <activity
             android:name=".AnyOrientationCaptureActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
