@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -46,7 +45,8 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.database)
-
+    // Проверьте актуальную версию
+    implementation ("com.google.firebase:firebase-database:20.4.2")
     // Добавлена зависимость для ZXing
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 

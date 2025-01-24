@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31">
         <activity
+            android:name=".Namer"
+            android:exported="false" />
+        <activity
             android:name=".QRCodeAdapter"
             android:exported="false" />
         <activity
